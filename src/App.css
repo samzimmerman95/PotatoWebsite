@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+a.link-icon {
+  color: rgb(39, 42, 45);
+}
