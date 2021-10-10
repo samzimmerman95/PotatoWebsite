@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/PotatoWebsite/static/css/main.407e38d8.chunk.css",
+    "main.js": "/PotatoWebsite/static/js/main.9f31a959.chunk.js",
+    "main.js.map": "/PotatoWebsite/static/js/main.9f31a959.chunk.js.map",
+    "runtime-main.js": "/PotatoWebsite/static/js/runtime-main.b6260c9d.js",
+    "runtime-main.js.map": "/PotatoWebsite/static/js/runtime-main.b6260c9d.js.map",
+    "static/js/2.9f12b460.chunk.js": "/PotatoWebsite/static/js/2.9f12b460.chunk.js",
+    "static/js/2.9f12b460.chunk.js.map": "/PotatoWebsite/static/js/2.9f12b460.chunk.js.map",
+    "static/js/3.3ce898cb.chunk.js": "/PotatoWebsite/static/js/3.3ce898cb.chunk.js",
+    "static/js/3.3ce898cb.chunk.js.map": "/PotatoWebsite/static/js/3.3ce898cb.chunk.js.map",
+    "index.html": "/PotatoWebsite/index.html",
+    "static/css/main.407e38d8.chunk.css.map": "/PotatoWebsite/static/css/main.407e38d8.chunk.css.map",
+    "static/js/2.9f12b460.chunk.js.LICENSE.txt": "/PotatoWebsite/static/js/2.9f12b460.chunk.js.LICENSE.txt",
+    "static/media/1.png": "/PotatoWebsite/static/media/1.9c53e0cc.png",
+    "static/media/2.png": "/PotatoWebsite/static/media/2.8da6d885.png",
+    "static/media/3.png": "/PotatoWebsite/static/media/3.c28e0fa9.png",
+    "static/media/5.png": "/PotatoWebsite/static/media/5.b1c22b04.png",
+    "static/media/67.png": "/PotatoWebsite/static/media/67.fef2f0de.png",
+    "static/media/matt.png": "/PotatoWebsite/static/media/matt.e35b41b9.png",
+    "static/media/sam.png": "/PotatoWebsite/static/media/sam.fef2f0de.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b6260c9d.js",
+    "static/js/2.9f12b460.chunk.js",
+    "static/css/main.407e38d8.chunk.css",
+    "static/js/main.9f31a959.chunk.js"
+  ]
+}
