@@ -38,5 +38,23 @@
 }
 
 a.link-icon {
-  color: rgb(39, 42, 45);
+  /* color: #20639b; */
+  /* color: rgb(39, 42, 45); */
+  color: #a6b4cf;
+}
+
+.mybackground {
+  background-color: #173f5f;
+}
+.myaccent1 {
+  color: #20639b;
+}
+.myaccent2 {
+  color: #3caea3;
+}
+.myaccent3 {
+  color: #f6d55c;
+}
+.myaccent4 {
+  background-color: #ed553b;
 }
