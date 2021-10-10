@@ -4,7 +4,9 @@ export default function Title() {
   return (
     <div className="row py-5">
       <div className="col-md-7 text-white">
-        <h1 className="">Potato Club</h1>
+        <h1 className="text-center">
+          Potato <br /> Club
+        </h1>
         <div>
           Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
