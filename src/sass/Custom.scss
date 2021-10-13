@@ -1,8 +1,15 @@
 // Custom.scss
-// Option A: Include all of Bootstrap
-
 // Include any default variable overrides here (though functions won't be available)
+// @import "../../node_modules/bootstrap/scss/functions";
 
-// @import "../node_modules/bootstrap/scss/bootstrap";
-// $h1-font-size: 5rem;
-@import "../../node_modules/bootstrap/scss/bootstrap"; // // Option B: Include parts of Bootstrap
+// @font-face {
+//   font-family: "Permanent Marker";
+//   src: url(https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap)
+//     format("");
+// }
+
+// $font-family-base: "Permanent Marker", cursive;
+$h1-font-size: 7.5rem; //Large main title
+$h2-font-size: 2.5rem; //Other Titles
+
+@import "../../node_modules/bootstrap/scss/bootstrap";

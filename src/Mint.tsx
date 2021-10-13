@@ -16,8 +16,8 @@ export default function Mint() {
   }
 
   return (
-    <div>
-      <h1 className="text-white">Join the Club</h1>
+    <div className="mb-2">
+      <h2 className="text-white">Join the Club</h2>
       <div className="row">
         <div className="col-md text-white">
           Text about the price and whatever garbage. Lorem ipsum dolor sit amet,
@@ -49,7 +49,7 @@ export default function Mint() {
               {totalCost} ETH
             </div>
           </div>
-          <div className="pt-2 pb-4 d-flex justify-content-center">
+          <div className="pt-2 pb-2 d-flex justify-content-center">
             <button type="button" className="btn myaccent4 px-5">
               Buy
             </button>

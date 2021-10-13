@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Team() {
   return (
-    <div>
-      <h1 className="text-white">The Team</h1>
+    <div className="">
+      <h2 className="text-white">The Team</h2>
       <div className="row pt-2 pb-5 d-flex justify-content-center">
         <div className="col-md-3 mb-2 d-flex flex-column justify-content-center align-items-center">
           <img
