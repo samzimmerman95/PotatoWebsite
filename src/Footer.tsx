@@ -3,20 +3,6 @@ import React from "react";
 export default function Footer() {
   return (
     <div>
-      {/* <div className="row pt-2 pb-5 d-flex justify-content-center">
-        <div className="col-md-2 bg-warning d-flex justify-content-center">
-          Twitter
-        </div>
-        <div className="col-md-2 bg-success d-flex justify-content-center">
-          Discord
-        </div>
-        <div className="col-md-2 bg-warning d-flex justify-content-center">
-          Opensea
-        </div>
-        <div className="col-md-2 bg-success d-flex justify-content-center">
-          Contract
-        </div>
-      </div> */}
       <div className="col-md d-md-flex text-center justify-content-center align-items-center pb-3">
         <a
           className="link-icon"
@@ -29,10 +15,18 @@ export default function Footer() {
         <a className="link-icon" href="" target="_blank">
           <i className="fab fa-discord fa-2x px-3"></i>
         </a>
-        <a className="link-icon" href="" target="_blank">
-          <i className="fas fa-store fa-2x px-3"></i>
+        <a className="link-icon" href="https://opensea.io" target="_blank">
+          <img
+            src={require("./assets/OpenSea.svg").default}
+            className="edit-link-icon link-photo mx-3 mb-3 mb-md-0"
+            alt="OpenSea"
+          />
         </a>
-        <a className="link-icon" href="" target="_blank">
+        <a
+          className="link-icon"
+          href="https://rinkeby.etherscan.io/address/0xE7C18a3E60FC387f3Ae2725BF92811AAD05865f3"
+          target="_blank"
+        >
           <i className="fas fa-file-contract fa-2x px-3"></i>
         </a>
       </div>

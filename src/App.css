@@ -37,10 +37,22 @@
   }
 }
 
+body {
+  background-color: #173f5f; /* Contorls the color of the page when you scroll past the top or bottom*/
+}
+
 a.link-icon {
   /* color: #20639b; */
   /* color: rgb(39, 42, 45); */
   color: #a6b4cf;
+}
+.edit-link-icon {
+  filter: invert(90%) sepia(80%) saturate(2125%) hue-rotate(177deg)
+    brightness(78%) contrast(112%);
+}
+.link-photo {
+  height: 38px;
+  width: 38px;
 }
 
 .mybackground {
