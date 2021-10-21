@@ -23,7 +23,7 @@ export default function Footer() {
         </a>
         <a
           className="link-icon"
-          href="https://opensea.io"
+          href="https://testnets.opensea.io/collection/potatoclub"
           target="_blank"
           rel="noreferrer"
         >
