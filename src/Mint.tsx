@@ -1,12 +1,16 @@
 import { ethers } from "ethers";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ContractABI from "./ContractABI.json";
 
 export default function Mint() {
-  const contractAddress = "0xE7C18a3E60FC387f3Ae2725BF92811AAD05865f3";
+  const contractAddress = "0xE75F070d1822C279b852C79b602B768a932f9702";
   const [count, setCount] = useState(1);
+  const [buyDisabled, setBuyDisabled] = useState(false);
+  const [incCounterStyle, setIncCounterStyle] = useState("");
+  const [decCounterStyle, setDecCounterStyle] = useState("mintCountDisable");
   const cost = 0.005;
   var totalCost = (cost * count).toFixed(3);
+  const desiredNetwork = "rinkeby";
   function incrementCount() {
     if (count < 20) {
       setCount(count + 1);
@@ -18,35 +22,25 @@ export default function Mint() {
     }
   }
 
-  function IncreaseCounter() {
-    if (count === 20) {
-      return (
-        <i
-          className="fas fa-plus fa-2x px-4 mintCountDisable"
-          onClick={incrementCount}
-        ></i>
-      );
-    }
-    return <i className="fas fa-plus fa-2x px-4" onClick={incrementCount}></i>;
-  }
-  function DecreaseCounter() {
+  useEffect(() => {
     if (count === 1) {
-      return (
-        <i
-          className="fas fa-minus fa-2x px-4 mintCountDisable"
-          onClick={decrementCount}
-        ></i>
-      );
+      setDecCounterStyle("mintCountDisable");
+    } else if (count === 20) {
+      setIncCounterStyle("mintCountDisable");
+    } else {
+      setDecCounterStyle("");
+      setIncCounterStyle("");
     }
-    return <i className="fas fa-minus fa-2x px-4" onClick={decrementCount}></i>;
-  }
+  }, [count]);
 
   async function clickMint() {
     const { ethereum }: any = window;
     const provider = new ethers.providers.Web3Provider(ethereum);
-    // The Metamask plugin also allows signing transactions to
-    // send ether and pay to change state within the blockchain.
-    // For this, you need the account signer...
+    if ((await provider.getNetwork()).name !== desiredNetwork) {
+      alert("Wrong network! Switch to " + desiredNetwork + ".");
+      return;
+    }
+    setBuyDisabled(true);
     const signer = provider.getSigner();
 
     const PotatoContract = new ethers.Contract(
@@ -54,7 +48,6 @@ export default function Mint() {
       ContractABI,
       signer
     );
-    console.log(parseFloat(totalCost) * 10 ** 18);
     const costWEI = parseFloat(totalCost) * 10 ** 18;
     console.log(await PotatoContract.balanceOf(signer.getAddress()));
     let tx = await PotatoContract.mint(signer.getAddress(), count, {
@@ -64,6 +57,7 @@ export default function Mint() {
 
     console.log(tx);
     console.log(await tx.wait());
+    setBuyDisabled(false);
   }
 
   return (
@@ -84,9 +78,15 @@ export default function Mint() {
               Amount
             </div>
             <div className="col-4 text-white d-flex justify-content-center align-items-center">
-              <DecreaseCounter />
+              <i
+                className={`fas fa-minus fa-2x px-4 ${decCounterStyle}`}
+                onClick={decrementCount}
+              ></i>
               {count}
-              <IncreaseCounter />
+              <i
+                className={`fas fa-plus fa-2x px-4 ${incCounterStyle}`}
+                onClick={incrementCount}
+              ></i>
             </div>
           </div>
           <div className="row pt-2 pb-4 text-white d-flex justify-content-center">
@@ -100,6 +100,7 @@ export default function Mint() {
               type="button"
               className="btn myaccent4 px-5"
               onClick={clickMint}
+              disabled={buyDisabled}
             >
               Buy
             </button>

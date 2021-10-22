@@ -4,6 +4,7 @@ import MetaMaskOnboarding from "@metamask/onboarding";
 export default function Connect() {
   const [connected, setConnected] = useState(false);
   const [buttonText, setButtonText] = useState("Disconnected");
+  const [buttonColor, setButtonColor] = useState("btn-danger");
   const [disabledButton, setDisabledButton] = useState(false);
   const [address, setAddress] = useState("");
   // Only run on load bc empty array second arg
@@ -31,6 +32,7 @@ export default function Connect() {
         setAddress(accounts[0]);
         setConnected(true);
         setButtonText("Connected");
+        setButtonColor("btn-success");
       }
     } catch (error) {
       console.error(error);
@@ -51,6 +53,7 @@ export default function Connect() {
         setAddress(accounts[0]);
         setConnected(true);
         setButtonText("Connected");
+        setButtonColor("btn-success");
       } catch (error) {
         console.error(error);
       }
@@ -58,39 +61,17 @@ export default function Connect() {
     }
   }
 
-  function ButtonBehavior() {
-    if (connected) {
-      return (
-        <button
-          type="button"
-          className="btn btn-success mb-2"
-          onClick={connectMetaMask}
-        >
-          {buttonText}
-        </button>
-      );
-    } else if (disabledButton) {
-      return (
-        <button type="button" className="btn btn-danger" disabled>
-          {buttonText}
-        </button>
-      );
-    } else {
-      return (
-        <button
-          type="button"
-          className="btn btn-danger"
-          onClick={connectMetaMask}
-        >
-          {buttonText}
-        </button>
-      );
-    }
-  }
   return (
     <div>
       <div className="d-flex justify-content-md-end pt-3 pb-1">
-        <ButtonBehavior />
+        <button
+          type="button"
+          className={`btn ${buttonColor} mb-2 `}
+          onClick={connectMetaMask}
+          disabled={disabledButton}
+        >
+          {buttonText}
+        </button>
       </div>
       {connected ? (
         <div className="d-flex justify-content-md-end text-white small">
