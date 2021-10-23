@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import MetaMaskOnboarding from "@metamask/onboarding";
 
-export default function Connect() {
+export default function Connect(props: { connectCallback: () => void }) {
   const [connected, setConnected] = useState(false);
   const [buttonText, setButtonText] = useState("Disconnected");
   const [buttonColor, setButtonColor] = useState("btn-danger");
   const [disabledButton, setDisabledButton] = useState(false);
   const [address, setAddress] = useState("");
+
   // Only run on load bc empty array second arg
   useEffect(() => {
     if (!isMetaMaskInstalled()) {
@@ -26,16 +27,13 @@ export default function Connect() {
 
   async function attemptConnection() {
     const { ethereum }: any = window;
-    try {
-      const accounts = await ethereum.request({ method: "eth_accounts" });
-      if (accounts.length !== 0) {
-        setAddress(accounts[0]);
-        setConnected(true);
-        setButtonText("Connected");
-        setButtonColor("btn-success");
-      }
-    } catch (error) {
-      console.error(error);
+    const accounts = await ethereum.request({ method: "eth_accounts" });
+    if (accounts.length !== 0) {
+      setAddress(accounts[0]);
+      setConnected(true);
+      setButtonText("Connected");
+      setButtonColor("btn-success");
+      props.connectCallback();
     }
   }
 
@@ -49,11 +47,7 @@ export default function Connect() {
       try {
         // Will open the MetaMask UI
         await ethereum.request({ method: "eth_requestAccounts" });
-        const accounts = await ethereum.request({ method: "eth_accounts" });
-        setAddress(accounts[0]);
-        setConnected(true);
-        setButtonText("Connected");
-        setButtonColor("btn-success");
+        attemptConnection();
       } catch (error) {
         console.error(error);
       }
