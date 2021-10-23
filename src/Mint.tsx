@@ -1,16 +1,20 @@
-import { ethers } from "ethers";
 import React, { useState, useEffect } from "react";
-import ContractABI from "./ContractABI.json";
 
-export default function Mint() {
-  const contractAddress = "0xE75F070d1822C279b852C79b602B768a932f9702";
+export default function Mint(props: any) {
   const [count, setCount] = useState(1);
-  const [buyDisabled, setBuyDisabled] = useState(false);
+  const [buyDisabled, setBuyDisabled] = useState(true);
   const [incCounterStyle, setIncCounterStyle] = useState("");
   const [decCounterStyle, setDecCounterStyle] = useState("mintCountDisable");
   const cost = 0.005;
   var totalCost = (cost * count).toFixed(3);
   const desiredNetwork = "rinkeby";
+
+  useEffect(() => {
+    if (Object.keys(props.signer).length !== 0) {
+      setBuyDisabled(false);
+    }
+  }, [props.signer]);
+
   function incrementCount() {
     if (count < 20) {
       setCount(count + 1);
@@ -34,23 +38,15 @@ export default function Mint() {
   }, [count]);
 
   async function clickMint() {
-    const { ethereum }: any = window;
-    const provider = new ethers.providers.Web3Provider(ethereum);
-    if ((await provider.getNetwork()).name !== desiredNetwork) {
+    if ((await props.provider.getNetwork()).name !== desiredNetwork) {
       alert("Wrong network! Switch to " + desiredNetwork + ".");
       return;
     }
     setBuyDisabled(true);
-    const signer = provider.getSigner();
 
-    const PotatoContract = new ethers.Contract(
-      contractAddress,
-      ContractABI,
-      signer
-    );
     const costWEI = parseFloat(totalCost) * 10 ** 18;
-    console.log(await PotatoContract.balanceOf(signer.getAddress()));
-    let tx = await PotatoContract.mint(signer.getAddress(), count, {
+    console.log(await props.contract.balanceOf(props.signer.getAddress()));
+    let tx = await props.contract.mint(props.signer.getAddress(), count, {
       // gasLimit: 500000,
       value: costWEI.toString(),
     });
