@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Collection() {
   return (
-    <div className="mb-2">
-      <h2 className="text-white">The Collection</h2>
+    <div className="mb-3">
+      <h2 className="text-white myheaderFont">The Collection</h2>
       <div className="row mt-2 d-flex justify-content-center">
         <div className="col-md-4 d-flex mb-3 justify-content-center">
           <img

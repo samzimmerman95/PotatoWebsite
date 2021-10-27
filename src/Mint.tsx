@@ -5,9 +5,8 @@ export default function Mint(props: any) {
   const [buyDisabled, setBuyDisabled] = useState(true);
   const [incCounterStyle, setIncCounterStyle] = useState("");
   const [decCounterStyle, setDecCounterStyle] = useState("mintCountDisable");
-  const cost = 0.005;
+  const [cost] = useState(0.005);
   var totalCost = (cost * count).toFixed(3);
-  const desiredNetwork = "rinkeby";
 
   useEffect(() => {
     if (Object.keys(props.signer).length !== 0) {
@@ -38,8 +37,8 @@ export default function Mint(props: any) {
   }, [count]);
 
   async function clickMint() {
-    if ((await props.provider.getNetwork()).name !== desiredNetwork) {
-      alert("Wrong network! Switch to " + desiredNetwork + ".");
+    if ((await props.provider.getNetwork()).name !== props.desiredNetwork) {
+      alert("Wrong network! Switch to " + props.desiredNetwork + ".");
       return;
     }
     setBuyDisabled(true);
@@ -57,16 +56,12 @@ export default function Mint(props: any) {
   }
 
   return (
-    <div className="mb-2">
-      <h2 className="text-white">Join the Club</h2>
+    <div className="mb-3">
+      <h2 className="text-white myheaderFont">Join the Club</h2>
       <div className="row">
         <div className="col-md text-white">
           Each Potato Club NFT will cost {cost} ETH. The price is fixed for the
           entire duration of sale. The maximum you can mint at one time is 20.
-          Text about the price and whatever garbage. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Mattis pellentesque id nibh tortor id
-          aliquet.
         </div>
         <div className="col-md">
           <div className="row pt-2 pb-2 d-flex justify-content-center align-items-center">
@@ -91,13 +86,18 @@ export default function Mint(props: any) {
               {totalCost} ETH
             </div>
           </div>
-          <div className="pt-2 pb-2 d-flex justify-content-center">
+          <div className="pt-2 d-flex justify-content-center">
             <button
               type="button"
-              className="btn myaccent4 px-5"
+              className="btn myaccent4 px-5 text-white"
               onClick={clickMint}
               disabled={buyDisabled}
             >
+              {/* <span
+                className="spinner-border spinner-border-sm"
+                role="status"
+                aria-hidden="true"
+              ></span> */}
               Buy
             </button>
           </div>

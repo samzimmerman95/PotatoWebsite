@@ -56,8 +56,8 @@ export default function Connect(props: { connectCallback: () => void }) {
   }
 
   return (
-    <div>
-      <div className="d-flex justify-content-md-end pt-3 pb-1">
+    <div className="mt-4 mb-4">
+      <div className="d-flex justify-content-md-end">
         <button
           type="button"
           className={`btn ${buttonColor} mb-2 `}

@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Title() {
   return (
-    <div className="row mt-5 pb-5">
+    <div className="row mb-3">
       <div className="col-md-7 text-white">
-        <h1 className="text-center lh-1">
+        <h1 className="text-center lh-1 myheaderFont">
           Potato <br /> Club
         </h1>
         <div>

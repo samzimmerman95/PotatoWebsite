@@ -104,22 +104,22 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 h1, .h1 {
-  font-size: calc(1.875rem + 7.5vw);
+  font-size: calc(2.075rem + 9.9vw);
 }
 
 @media (min-width: 1200px) {
   h1, .h1 {
-    font-size: 7.5rem;
+    font-size: 9.5rem;
   }
 }
 
 h2, .h2 {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: calc(1.475rem + 2.7vw);
 }
 
 @media (min-width: 1200px) {
   h2, .h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -8641,11 +8641,11 @@ fieldset:disabled .btn {
 }
 
 .fs-1 {
-  font-size: calc(1.875rem + 7.5vw) !important;
+  font-size: calc(2.075rem + 9.9vw) !important;
 }
 
 .fs-2 {
-  font-size: calc(1.375rem + 1.5vw) !important;
+  font-size: calc(1.475rem + 2.7vw) !important;
 }
 
 .fs-3 {
@@ -11906,10 +11906,10 @@ fieldset:disabled .btn {
 
 @media (min-width: 1200px) {
   .fs-1 {
-    font-size: 7.5rem !important;
+    font-size: 9.5rem !important;
   }
   .fs-2 {
-    font-size: 2.5rem !important;
+    font-size: 3.5rem !important;
   }
   .fs-3 {
     font-size: 1.75rem !important;

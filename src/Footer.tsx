@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Footer() {
+export default function Footer(props: any) {
   return (
     <div>
-      <div className="col-md d-md-flex text-center justify-content-center align-items-center pb-3">
+      <div className="col-md d-md-flex text-center justify-content-center align-items-center mb-4">
         <a
           className="link-icon"
           href="https://twitter.com/Potato_Club_"
@@ -35,7 +35,7 @@ export default function Footer() {
         </a>
         <a
           className="link-icon"
-          href="https://rinkeby.etherscan.io/address/0xE7C18a3E60FC387f3Ae2725BF92811AAD05865f3"
+          href={"https://rinkeby.etherscan.io/address/" + props.address}
           target="_blank"
           rel="noreferrer"
         >
