@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Collection() {
+export default function Collection(props: any) {
   return (
     <div className="mb-3">
       <h2 className="text-white myheaderFont">The Collection</h2>
@@ -42,6 +42,16 @@ export default function Collection() {
             alt="Collection Item"
           />
         </div>
+      </div>
+      <div className="mt-2 d-flex justify-content-center">
+        <a
+          className="btn myaccent4 px-4 text-white"
+          href={props.openseaCollection}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Show More
+        </a>
       </div>
     </div>
   );

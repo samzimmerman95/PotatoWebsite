@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
+import MintModal from "./MintModal";
 
 export default function Mint(props: any) {
   const [count, setCount] = useState(1);
   const [buyDisabled, setBuyDisabled] = useState(true);
   const [incCounterStyle, setIncCounterStyle] = useState("");
   const [decCounterStyle, setDecCounterStyle] = useState("mintCountDisable");
-  const [cost] = useState(0.005);
+  const [cost] = useState(0.001);
+  const [showModal, setShowModal] = useState(false);
+  const [modalText, setModalText] = useState("");
+  const [modalSuccess, setModalSuccess] = useState(true);
+  const [modalWaiting, setModalWaiting] = useState(true);
   var totalCost = (cost * count).toFixed(3);
 
   useEffect(() => {
@@ -24,6 +29,9 @@ export default function Mint(props: any) {
       setCount(count - 1);
     }
   }
+  function closeModal() {
+    setShowModal(false);
+  }
 
   useEffect(() => {
     if (count === 1) {
@@ -38,26 +46,56 @@ export default function Mint(props: any) {
 
   async function clickMint() {
     if ((await props.provider.getNetwork()).name !== props.desiredNetwork) {
-      alert("Wrong network! Switch to " + props.desiredNetwork + ".");
+      alert("Wrong network! Please switch to " + props.desiredNetwork + ".");
       return;
     }
     setBuyDisabled(true);
 
     const costWEI = parseFloat(totalCost) * 10 ** 18;
-    console.log(await props.contract.balanceOf(props.signer.getAddress()));
-    let tx = await props.contract.mint(props.signer.getAddress(), count, {
-      // gasLimit: 500000,
-      value: costWEI.toString(),
-    });
 
-    console.log(tx);
-    console.log(await tx.wait());
+    await props.contract
+      .mint(props.signer.getAddress(), count, {
+        // gasLimit: 500000,
+        value: costWEI.toString(),
+      })
+      .then((result: any) => {
+        console.log("tx", result);
+        setShowModal(true);
+        return result.wait();
+      })
+      .then((result: any) => {
+        setShowModal(true);
+        setModalWaiting(false);
+        console.log("Wait result", result);
+      })
+      .catch((err: any) => {
+        setModalSuccess(false);
+        try {
+          setModalText(err.error.message);
+        } catch (error) {
+          setModalText(err);
+        } finally {
+          setShowModal(true);
+        }
+      });
+
+    // console.log("wait for tx", await tx.wait());
+    // let waitTX = await tx.wait().catch((err: any) => {
+    //   console.error("waitTX error:", err);
+    // });
     setBuyDisabled(false);
   }
 
   return (
     <div className="mb-3">
       <h2 className="text-white myheaderFont">Join the Club</h2>
+      <MintModal
+        show={showModal}
+        bodyText={modalText}
+        waiting={modalWaiting}
+        success={modalSuccess}
+        onClose={closeModal}
+      />
       <div className="row">
         <div className="col-md text-white">
           Each Potato Club NFT will cost {cost} ETH. The price is fixed for the
@@ -93,11 +131,6 @@ export default function Mint(props: any) {
               onClick={clickMint}
               disabled={buyDisabled}
             >
-              {/* <span
-                className="spinner-border spinner-border-sm"
-                role="status"
-                aria-hidden="true"
-              ></span> */}
               Buy
             </button>
           </div>

@@ -14,13 +14,16 @@ function App() {
   const [ethereum, setEthereum] = useState();
   const [provider, setProvider] = useState({});
   const [signer, setSigner] = useState({});
-  const [contractAddress] = useState(
-    "0xE75F070d1822C279b852C79b602B768a932f9702"
-  );
   // const [contractAddress] = useState(
-  //   "0xE7C18a3E60FC387f3Ae2725BF92811AAD05865f3"
-  // );
+  //   "0xE75F070d1822C279b852C79b602B768a932f9702"
+  // ); //No price for owner
+  const [contractAddress] = useState(
+    "0xE7C18a3E60FC387f3Ae2725BF92811AAD05865f3"
+  );
   const [PotatoContract, setPotatoContract] = useState({});
+  const [collectionURL] = useState(
+    "https://testnets.opensea.io/collection/potatoclub"
+  );
   const [desiredNetwork] = useState("rinkeby");
 
   function onConnected() {
@@ -49,9 +52,10 @@ function App() {
           provider={provider}
           signer={signer}
           contract={PotatoContract}
+          contractAddress={contractAddress}
           desiredNetwork={desiredNetwork}
         ></MyCollection>
-        <Collection></Collection>
+        <Collection openseaCollection={collectionURL}></Collection>
         <Mint
           provider={provider}
           signer={signer}
@@ -59,7 +63,10 @@ function App() {
           desiredNetwork={desiredNetwork}
         ></Mint>
         <Team></Team>
-        <Footer address={contractAddress}></Footer>
+        <Footer
+          address={contractAddress}
+          openseaCollection={collectionURL}
+        ></Footer>
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ export default function Footer(props: any) {
         </a>
         <a
           className="link-icon"
-          href="https://testnets.opensea.io/collection/potatoclub"
+          href={props.openseaCollection}
           target="_blank"
           rel="noreferrer"
         >

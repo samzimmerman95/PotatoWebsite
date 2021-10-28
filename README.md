@@ -49,4 +49,5 @@ For Deployment to mainnet
 
 1. Change desired network
 2. Change contract address
-3. Footer links to opensea and etherscan
+3. OpenSea collection link
+4. Footer links etherscan
