@@ -4,7 +4,7 @@ import MetaMaskOnboarding from "@metamask/onboarding";
 export default function Connect(props: { connectCallback: () => void }) {
   const [connected, setConnected] = useState(false);
   const [buttonText, setButtonText] = useState("Disconnected");
-  const [buttonColor, setButtonColor] = useState("btn-danger");
+  const [buttonColor, setButtonColor] = useState("myaccentRed");
   const [disabledButton, setDisabledButton] = useState(false);
   const [address, setAddress] = useState("");
 
@@ -60,7 +60,7 @@ export default function Connect(props: { connectCallback: () => void }) {
       <div className="d-flex justify-content-md-end">
         <button
           type="button"
-          className={`btn ${buttonColor} mb-2 `}
+          className={`btn ${buttonColor} text-white mb-2 `}
           onClick={connectMetaMask}
           disabled={disabledButton}
         >

@@ -30,14 +30,14 @@ export default function Collection(props: any) {
       <div className="row mt-md-2 d-flex justify-content-center">
         <div className="col-md-4 d-flex mb-3 justify-content-center">
           <img
-            src={require("./assets/collection/5.png").default}
+            src={require("./assets/collection/4.png").default}
             className="img-fluid rounded"
             alt="Collection Item"
           />
         </div>
         <div className="col-md-4 d-flex mb-3 justify-content-center">
           <img
-            src={require("./assets/collection/67.png").default}
+            src={require("./assets/collection/5.png").default}
             className="img-fluid rounded"
             alt="Collection Item"
           />

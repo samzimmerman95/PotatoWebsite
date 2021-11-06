@@ -8,14 +8,13 @@ export default function Title() {
           Potato <br /> Club
         </h1>
         <div>
-          Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Mattis pellentesque id nibh tortor id aliquet. Urna et pharetra
-          pharetra massa massa ultricies. Tellus cras adipiscing enim eu.
+          The Potato Club is a collection of 10,000 randomly generated Potato
+          NFTs.
         </div>
       </div>
       <div className="col-md-5 d-flex justify-content-end">
         <img
+          // src={require("./assets/Potatoes.gif").default}
           src={require("./assets/team/sam.png").default}
           className="img-fluid rounded"
           alt="GIF"

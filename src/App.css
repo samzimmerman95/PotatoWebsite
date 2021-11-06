@@ -1,74 +1,39 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 body {
-  background-color: #173f5f; /* Contorls the color of the page when you scroll past the top or bottom*/
+  background-color: #173f5f; /* Controls the color of the page when you scroll past the top or bottom */
+  background-image: linear-gradient(140deg, #0b2e4a, #5283ab);
+  /* background-image: linear-gradient(145deg, red, yellow); */
 }
 
 a.link-icon {
   /* color: #20639b; */
   /* color: rgb(39, 42, 45); */
-  color: #a6b4cf;
+  /* color: #a6b4cf; */
+  color: white;
 }
 .edit-link-icon {
-  filter: invert(90%) sepia(80%) saturate(2125%) hue-rotate(177deg)
-    brightness(78%) contrast(112%);
+  /* filter: invert(90%) sepia(80%) saturate(2125%) hue-rotate(177deg)
+    brightness(78%) contrast(112%); */
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(247deg)
+    brightness(100%) contrast(100%);
 }
 .link-photo {
   height: 38px;
   width: 38px;
 }
 
-.mybackground {
-  background-color: #173f5f;
-}
 .myaccent1 {
   background-color: #20639b;
 }
-.myaccent2 {
-  color: #3caea3;
+.myaccentRed {
+  background-color: #ed553b;
 }
 .myaccent3 {
   color: #f6d55c;
 }
 .myaccent4 {
-  background-color: #ed553b;
+  /* background-color: #ed553b; */
+  background-color: #042642;
+  /* background-color: #7ca7ca; */
 }
 i.mintCountDisable {
   color: #ffffffa9;
@@ -78,4 +43,6 @@ i.mintCountDisable {
   /* font-family: "Permanent Marker", cursive; */
   /* font-family: "Berkshire Swash", cursive; */
   font-family: "Caveat", cursive;
+  /* font-family: "Irish Grover", cursive; */
+  /* font-family: "Poor Story", cursive; */
 }

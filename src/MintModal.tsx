@@ -37,7 +37,7 @@ export default function MintModal(props: any) {
         <Modal.Footer>
           <button
             type="button"
-            className="btn myaccent1 px-5 text-white"
+            className="btn myaccent4 px-5 text-white"
             onClick={props.onClose}
           >
             Close
@@ -62,7 +62,7 @@ export default function MintModal(props: any) {
         <Modal.Footer className="d-flex justify-content-center">
           <button
             type="button"
-            className="btn myaccent4 px-4 text-white"
+            className="btn myaccentRed px-4 text-white"
             onClick={props.onClose}
           >
             Close

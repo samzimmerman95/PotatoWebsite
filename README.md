@@ -51,3 +51,10 @@ For Deployment to mainnet
 2. Change contract address
 3. OpenSea collection link
 4. Footer links etherscan
+
+Contract Addresses
+
+1. First one. All minted
+   0xE7C18a3E60FC387f3Ae2725BF92811AAD05865f3
+2. No price restriction for owner
+   0xE75F070d1822C279b852C79b602B768a932f9702
