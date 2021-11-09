@@ -15,7 +15,7 @@ function App() {
   const [provider, setProvider] = useState({});
   const [signer, setSigner] = useState({});
   const [contractAddress] = useState(
-    "0xE75F070d1822C279b852C79b602B768a932f9702"
+    "0xFc1a7aa5Eb4793f623989383bFC7Eb6dE72C66eD"
   );
   const [PotatoContract, setPotatoContract] = useState({});
   const [collectionURL] = useState(

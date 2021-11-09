@@ -1,7 +1,22 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
+import Confetti from "react-dom-confetti";
 
 export default function MintModal(props: any) {
+  const config = {
+    angle: 90,
+    spread: 360,
+    startVelocity: 35,
+    elementCount: 200,
+    dragFriction: 0.12,
+    duration: 6500,
+    stagger: 3,
+    width: "10px",
+    height: "10px",
+    perspective: "500px",
+    colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+  };
+
   if (props.success) {
     return (
       <Modal
@@ -27,6 +42,9 @@ export default function MintModal(props: any) {
               <Modal.Title>Congratulations!</Modal.Title>
             </Modal.Header>
             <Modal.Body>
+              <div className="d-flex justify-content-center">
+                <Confetti active={props.goConfetti} config={config} />
+              </div>
               You are offically a Potato Club NFT owner! To see your Potato
               refresh the page, or visit OpenSea. Thank you for joining our
               community, we hope to see you around!

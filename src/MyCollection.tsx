@@ -18,7 +18,7 @@ export default function MyCollection(props: any) {
       return;
     }
     let balance = await props.contract.balanceOf(props.signer.getAddress());
-    if (balance) {
+    if (Number(balance)) {
       let ownerWallet = await props.contract.walletOfOwner(
         props.signer.getAddress()
       );

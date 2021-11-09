@@ -1,20 +1,21 @@
 body {
-  background-color: #173f5f; /* Controls the color of the page when you scroll past the top or bottom */
-  background-image: linear-gradient(140deg, #0b2e4a, #5283ab);
-  /* background-image: linear-gradient(145deg, red, yellow); */
+  background-color: #709fc5; /* Controls the color of the page when you scroll past the top or bottom */
+  background-image: linear-gradient(320deg, #0b2e4a, #709fc5);
 }
 
 a.link-icon {
   /* color: #20639b; */
   /* color: rgb(39, 42, 45); */
   /* color: #a6b4cf; */
-  color: white;
+  color: #b1bed8;
 }
 .edit-link-icon {
   /* filter: invert(90%) sepia(80%) saturate(2125%) hue-rotate(177deg)
     brightness(78%) contrast(112%); */
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(247deg)
-    brightness(100%) contrast(100%);
+  /* filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(247deg)
+    brightness(100%) contrast(100%); */
+  filter: invert(72%) sepia(43%) saturate(152%) hue-rotate(181deg)
+    brightness(92%) contrast(90%);
 }
 .link-photo {
   height: 38px;
@@ -27,22 +28,34 @@ a.link-icon {
 .myaccentRed {
   background-color: #ed553b;
 }
-.myaccent3 {
-  color: #f6d55c;
+.myaccentGreen {
+  background-color: #479b4a;
 }
 .myaccent4 {
-  /* background-color: #ed553b; */
-  background-color: #042642;
-  /* background-color: #7ca7ca; */
+  /* background-color: #042642; */
+  background-color: #7ca7ca;
 }
 i.mintCountDisable {
   color: #ffffffa9;
 }
 
 .myheaderFont {
-  /* font-family: "Permanent Marker", cursive; */
-  /* font-family: "Berkshire Swash", cursive; */
   font-family: "Caveat", cursive;
-  /* font-family: "Irish Grover", cursive; */
-  /* font-family: "Poor Story", cursive; */
+}
+
+.relativeContainer {
+  position: relative;
+}
+
+.collectionBorder {
+  position: absolute;
+  bottom: -7%;
+  width: 105%;
+}
+
+.titleBorder {
+  position: absolute;
+  bottom: -4%;
+  left: -6%;
+  width: 112%;
 }

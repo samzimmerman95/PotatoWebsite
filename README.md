@@ -58,3 +58,5 @@ Contract Addresses
    0xE7C18a3E60FC387f3Ae2725BF92811AAD05865f3
 2. No price restriction for owner
    0xE75F070d1822C279b852C79b602B768a932f9702
+3. Set of 50 potatoes
+   0xFc1a7aa5Eb4793f623989383bFC7Eb6dE72C66eD

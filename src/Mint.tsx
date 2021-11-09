@@ -11,6 +11,7 @@ export default function Mint(props: any) {
   const [modalText, setModalText] = useState("");
   const [modalSuccess, setModalSuccess] = useState(true);
   const [modalWaiting, setModalWaiting] = useState(true);
+  const [modalConfetti, setModalConfetti] = useState(false);
   var totalCost = (cost * count).toFixed(2);
 
   useEffect(() => {
@@ -31,6 +32,10 @@ export default function Mint(props: any) {
   }
   function closeModal() {
     setShowModal(false);
+    setModalText("");
+    setModalSuccess(true);
+    setModalWaiting(true);
+    setModalConfetti(false);
   }
 
   useEffect(() => {
@@ -66,6 +71,7 @@ export default function Mint(props: any) {
       .then((result: any) => {
         setShowModal(true);
         setModalWaiting(false);
+        setModalConfetti(true);
         console.log("Wait result", result);
       })
       .catch((err: any) => {
@@ -73,16 +79,16 @@ export default function Mint(props: any) {
         try {
           setModalText(err.error.message);
         } catch (error) {
-          setModalText(err);
+          try {
+            setModalText(err.message);
+          } catch (error2) {
+            setModalText(err.toString());
+          }
         } finally {
           setShowModal(true);
         }
       });
 
-    // console.log("wait for tx", await tx.wait());
-    // let waitTX = await tx.wait().catch((err: any) => {
-    //   console.error("waitTX error:", err);
-    // });
     setBuyDisabled(false);
   }
 
@@ -95,11 +101,13 @@ export default function Mint(props: any) {
         waiting={modalWaiting}
         success={modalSuccess}
         onClose={closeModal}
+        goConfetti={modalConfetti}
       />
       <div className="row">
         <div className="col-md text-white">
           Each Potato Club NFT will cost {cost} ETH. The price is fixed for the
           entire duration of sale. The maximum you can mint at one time is 20.
+          Come on, join the club!
         </div>
         <div className="col-md">
           <div className="row pt-2 pb-2 d-flex justify-content-center align-items-center">

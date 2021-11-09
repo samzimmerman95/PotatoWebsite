@@ -32,7 +32,7 @@ export default function Connect(props: { connectCallback: () => void }) {
       setAddress(accounts[0]);
       setConnected(true);
       setButtonText("Connected");
-      setButtonColor("btn-success");
+      setButtonColor("myaccentGreen");
       props.connectCallback();
     }
   }
