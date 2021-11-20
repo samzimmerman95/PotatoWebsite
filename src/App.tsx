@@ -19,7 +19,7 @@ function App() {
   );
   const [PotatoContract, setPotatoContract] = useState({});
   const [collectionURL] = useState(
-    "https://testnets.opensea.io/collection/potatoclub"
+    "https://testnets.opensea.io/collection/potatoclub-v2"
   );
   const [desiredNetwork] = useState("rinkeby");
 

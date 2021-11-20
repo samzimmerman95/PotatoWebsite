@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Countdown from "react-countdown";
 import MintModal from "./MintModal";
 
 export default function Mint(props: any) {
@@ -12,13 +13,22 @@ export default function Mint(props: any) {
   const [modalSuccess, setModalSuccess] = useState(true);
   const [modalWaiting, setModalWaiting] = useState(true);
   const [modalConfetti, setModalConfetti] = useState(false);
+  const [showTimer, setShowTimer] = useState(true);
+  // const [releaseTime] = useState(1638403200000);
+  const [releaseTime] = useState(Date.now() + 10000);
   var totalCost = (cost * count).toFixed(2);
 
   useEffect(() => {
-    if (Object.keys(props.signer).length !== 0) {
+    if (Object.keys(props.signer).length !== 0 && Date.now() >= releaseTime) {
       setBuyDisabled(false);
     }
-  }, [props.signer]);
+  }, [props.signer, showTimer]);
+
+  useEffect(() => {
+    if (Date.now() >= releaseTime) {
+      setShowTimer(false);
+    }
+  }, []);
 
   function incrementCount() {
     if (count < 20) {
@@ -105,10 +115,23 @@ export default function Mint(props: any) {
       />
       <div className="row">
         <div className="col-md text-white">
-          Each Potato Club NFT will cost {cost} ETH. The price is fixed for the
-          entire duration of sale. The maximum you can mint at one time is 20.
-          Come on, join the club!
+          <div className="mb-4">
+            Each Potato Club NFT will only cost {cost} ETH. The price is fixed
+            for the entire duration of sale. The maximum you can mint at one
+            time is 20. Come on, join the club!
+          </div>
+          <div className="text-center fs-4">
+            {showTimer ? (
+              <Countdown
+                date={releaseTime}
+                onComplete={() => setShowTimer(false)}
+              />
+            ) : (
+              <div></div>
+            )}
+          </div>
         </div>
+
         <div className="col-md">
           <div className="row pt-2 pb-2 d-flex justify-content-center align-items-center">
             <div className="col-4 text-white d-flex justify-content-start">

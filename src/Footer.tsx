@@ -15,7 +15,7 @@ export default function Footer(props: any) {
 
         <a
           className="link-icon"
-          href="https://opensea.io"
+          href="https://discord.gg/mkdaSbE2TU"
           target="_blank"
           rel="noreferrer"
         >
