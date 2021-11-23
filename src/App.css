@@ -49,13 +49,18 @@ i.mintCountDisable {
 
 .collectionBorder {
   position: absolute;
-  bottom: -7%;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
   width: 105%;
 }
 
 .titleBorder {
   position: absolute;
-  bottom: -4%;
-  left: -6%;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
   width: 112%;
 }

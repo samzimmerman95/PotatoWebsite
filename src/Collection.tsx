@@ -7,7 +7,7 @@ export default function Collection(props: any) {
       <h2 className="text-white myheaderFont">The Collection</h2>
       <div className="row mt-2 d-flex justify-content-center">
         <div
-          className="col-md-4 d-flex mb-3 justify-content-center relativeContainer"
+          className="col-md-4 d-flex mb-4 mb-md-3 justify-content-center relativeContainer"
           onMouseEnter={() => setShowBorder(1)}
           onMouseLeave={() => setShowBorder(0)}
         >
@@ -27,7 +27,7 @@ export default function Collection(props: any) {
           )}
         </div>
         <div
-          className="col-md-4 d-flex mb-3 justify-content-center relativeContainer"
+          className="col-md-4 d-flex mb-4 mb-md-3 justify-content-center relativeContainer"
           onMouseEnter={() => setShowBorder(2)}
           onMouseLeave={() => setShowBorder(0)}
         >
@@ -47,7 +47,7 @@ export default function Collection(props: any) {
           )}
         </div>
         <div
-          className="col-md-4 d-flex mb-3 justify-content-center relativeContainer"
+          className="col-md-4 d-flex mb-4 mb-md-3 justify-content-center relativeContainer"
           onMouseEnter={() => setShowBorder(3)}
           onMouseLeave={() => setShowBorder(0)}
         >
@@ -69,7 +69,7 @@ export default function Collection(props: any) {
       </div>
       <div className="row mt-md-2 d-flex justify-content-center">
         <div
-          className="col-md-4 d-flex mb-3 justify-content-center relativeContainer"
+          className="col-md-4 d-flex mb-4 mb-md-3 justify-content-center relativeContainer"
           onMouseEnter={() => setShowBorder(4)}
           onMouseLeave={() => setShowBorder(0)}
         >
@@ -89,7 +89,7 @@ export default function Collection(props: any) {
           )}
         </div>
         <div
-          className="col-md-4 d-flex mb-3 justify-content-center relativeContainer"
+          className="col-md-4 d-flex mb-4 mb-md-3 justify-content-center relativeContainer"
           onMouseEnter={() => setShowBorder(5)}
           onMouseLeave={() => setShowBorder(0)}
         >

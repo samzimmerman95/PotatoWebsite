@@ -22,7 +22,7 @@ export default function Mint(props: any) {
     if (Object.keys(props.signer).length !== 0 && Date.now() >= releaseTime) {
       setBuyDisabled(false);
     }
-  }, [props.signer, showTimer]);
+  }, [props.signer, showTimer, releaseTime]);
 
   useEffect(() => {
     if (Date.now() >= releaseTime) {

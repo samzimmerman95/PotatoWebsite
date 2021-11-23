@@ -60,3 +60,14 @@ Contract Addresses
    0xE75F070d1822C279b852C79b602B768a932f9702
 3. Set of 50 potatoes
    0xFc1a7aa5Eb4793f623989383bFC7Eb6dE72C66eD
+
+Creating the icon.ico
+
+```
+convert icon.png -resize 256x256 256.png
+convert icon.png -resize 128x128 128.png
+convert icon.png -resize 64x64 64.png
+convert icon.png -resize 32x32 32.png
+convert icon.png -resize 16x16 16.png
+convert 16.png 32.png 64.png 128.png 256.png icon.ico
+```

@@ -14,7 +14,7 @@ export default function Title() {
           mashed. All potato lovers are welcome!
         </div>
       </div>
-      <div className="col-md-5 d-flex justify-content-end relativeContainer py-4">
+      <div className="col-md-5 d-flex align-items-center relativeContainer py-5 py-md-4">
         <img
           // src={require("./assets/Potatoes.gif").default}
           src={require("./assets/team/sam.png").default}
