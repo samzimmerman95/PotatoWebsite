@@ -19,12 +19,17 @@ export default function MyCollection(props: any) {
     }
     let balance = await props.contract.balanceOf(props.signer.getAddress());
     if (Number(balance)) {
-      let ownerWallet = await props.contract.walletOfOwner(
-        props.signer.getAddress()
-      );
+      let ownerWallet = await props.contract
+        .walletOfOwner(props.signer.getAddress())
+        .then((result: any) => {
+          let toSort: number[] = [...result];
+          return toSort.sort((a: number, b: number) => a - b);
+        });
+
       let myImages: myImagesData[] = [];
       for (let i = 0; i < ownerWallet.length; i++) {
         let uri: string = await props.contract.tokenURI(ownerWallet[i]);
+        uri = uri.replace(/\s+/g, "");
         const metadata = await fetch("https://ipfs.io/ipfs/" + uri.slice(7));
         const metadataJSON = await metadata.json();
         myImages.push({

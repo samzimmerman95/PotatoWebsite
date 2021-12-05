@@ -15,11 +15,11 @@ function App() {
   const [provider, setProvider] = useState({});
   const [signer, setSigner] = useState({});
   const [contractAddress] = useState(
-    "0xFc1a7aa5Eb4793f623989383bFC7Eb6dE72C66eD"
+    "0x0a8E812da2cf05b53090Fe0a74D550236AC52Eec"
   );
   const [PotatoContract, setPotatoContract] = useState({});
   const [collectionURL] = useState(
-    "https://testnets.opensea.io/collection/potatoclub-v2"
+    "https://testnets.opensea.io/collection/potatoclub-v4"
   );
   const [desiredNetwork] = useState("rinkeby");
 
@@ -34,6 +34,7 @@ function App() {
       signer
     );
     ethereum.on("chainChanged", () => window.location.reload());
+    ethereum.on("accountsChanged", () => window.location.reload());
     setEthereum(ethereum);
     setProvider(provider);
     setSigner(signer);

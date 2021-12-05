@@ -60,6 +60,8 @@ Contract Addresses
    0xE75F070d1822C279b852C79b602B768a932f9702
 3. Set of 50 potatoes
    0xFc1a7aa5Eb4793f623989383bFC7Eb6dE72C66eD
+4. 10k set Rinkeby
+   0x0a8E812da2cf05b53090Fe0a74D550236AC52Eec
 
 Creating the icon.ico
 
