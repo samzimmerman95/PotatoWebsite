@@ -9,14 +9,17 @@ export default function Title() {
         </h1>
         <div>
           The Potato Club is a collection of 10,000 rare, randomly generated
-          potato NFTs sprouting up on the Ethereum blockchain. At the Potato
-          Club, it doesn’t matter if you like your potatoes roasted, baked or
-          mashed. All potato lovers are welcome!
+          potato NFTs sprouting up on the Polygon network. We use the Polygon
+          network because it is less energy intensive, faster, and exponentially
+          cheaper to use, all while being built on top of Ethereum. At the
+          Potato Club, it doesn't matter if you like your potatoes roasted,
+          baked or mashed. All potato lovers are welcome!
         </div>
       </div>
       <div className="col-md-5 d-flex align-items-center relativeContainer py-5 py-md-4">
         <img
-          src={require("./assets/PotatoesV2.gif").default}
+          // src={require("./assets/PotatoesV2.gif").default}
+          src={require("./assets/team/sam.png").default}
           className="img-fluid rounded"
           alt="GIF"
         />

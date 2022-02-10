@@ -124,12 +124,12 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: calc(1.3rem + 0.6vw);
+  font-size: calc(1.375rem + 1.5vw);
 }
 
 @media (min-width: 1200px) {
   h3, .h3 {
-    font-size: 1.75rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -8649,7 +8649,7 @@ fieldset:disabled .btn {
 }
 
 .fs-3 {
-  font-size: calc(1.3rem + 0.6vw) !important;
+  font-size: calc(1.375rem + 1.5vw) !important;
 }
 
 .fs-4 {
@@ -11912,7 +11912,7 @@ fieldset:disabled .btn {
     font-size: 3.5rem !important;
   }
   .fs-3 {
-    font-size: 1.75rem !important;
+    font-size: 2.5rem !important;
   }
   .fs-4 {
     font-size: 1.5rem !important;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Countdown from "react-countdown";
 import MintModal from "./MintModal";
 
@@ -7,16 +8,16 @@ export default function Mint(props: any) {
   const [buyDisabled, setBuyDisabled] = useState(true);
   const [incCounterStyle, setIncCounterStyle] = useState("");
   const [decCounterStyle, setDecCounterStyle] = useState("mintCountDisable");
-  const [cost] = useState(0.01);
+  const [cost] = useState(20);
   const [showModal, setShowModal] = useState(false);
   const [modalText, setModalText] = useState("");
   const [modalSuccess, setModalSuccess] = useState(true);
   const [modalWaiting, setModalWaiting] = useState(true);
   const [modalConfetti, setModalConfetti] = useState(false);
   const [showTimer, setShowTimer] = useState(true);
-  // const [releaseTime] = useState(1638403200000);
-  const [releaseTime] = useState(Date.now() + 10000);
-  var totalCost = (cost * count).toFixed(2);
+  const [releaseTime] = useState(1638702747000);
+  // const [releaseTime] = useState(Date.now() + 10000);
+  var totalCost = (cost * count).toFixed(0);
 
   useEffect(() => {
     if (Object.keys(props.signer).length !== 0 && Date.now() >= releaseTime) {
@@ -116,9 +117,9 @@ export default function Mint(props: any) {
       <div className="row">
         <div className="col-md text-white">
           <div className="mb-4">
-            Each Potato Club NFT will only cost {cost} ETH. The price is fixed
-            for the entire duration of sale. The maximum you can mint at one
-            time is 20. Come on, join the club!
+            Each Potato Club NFT will only cost {cost} MATIC. If you need help
+            with the minting process, consult our guide below. Come on, join the
+            club!
           </div>
           <div className="text-center fs-4">
             {showTimer ? (
@@ -152,7 +153,7 @@ export default function Mint(props: any) {
           <div className="row pt-2 pb-4 text-white d-flex justify-content-center">
             <div className="col-4 d-flex justify-content-start">Total</div>
             <div className="col-4 d-flex justify-content-center">
-              {totalCost} ETH
+              {totalCost} MATIC
             </div>
           </div>
           <div className="pt-2 d-flex justify-content-center">
@@ -166,6 +167,16 @@ export default function Mint(props: any) {
             </button>
           </div>
         </div>
+      </div>
+      <div className="mt-2 d-flex justify-content-center">
+        <Link
+          to="/how-to-guide"
+          className="btn myaccent4 px-5 text-white"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Help Guide
+        </Link>
       </div>
     </div>
   );

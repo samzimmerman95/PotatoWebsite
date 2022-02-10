@@ -51,6 +51,7 @@ For Deployment to mainnet
 2. Change contract address
 3. OpenSea collection link
 4. Footer links etherscan
+5. Set release time in Mint.tsx
 
 Contract Addresses
 
