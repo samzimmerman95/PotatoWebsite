@@ -47,7 +47,7 @@ export default function MintModal(props: any) {
               </div>
               You are offically a Potato Club NFT owner! To see your Potato
               refresh the page, or visit OpenSea. Thank you for joining our
-              community, we hope to see you around!
+              community, we hope to see you around on Discord or Twitter!
             </Modal.Body>
           </div>
         )}

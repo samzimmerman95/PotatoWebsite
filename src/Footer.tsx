@@ -35,7 +35,7 @@ export default function Footer(props: any) {
         </a>
         <a
           className="link-icon"
-          href={"https://rinkeby.etherscan.io/address/" + props.address}
+          href={"https://mumbai.polygonscan.com/address/" + props.address}
           target="_blank"
           rel="noreferrer"
         >

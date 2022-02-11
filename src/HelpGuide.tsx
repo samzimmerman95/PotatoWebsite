@@ -12,8 +12,6 @@ export default function HelpGuide(props: any) {
               to="/"
               className="text-white"
               style={{ textDecoration: "none" }}
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <h3>Potato Club </h3>
             </Link>

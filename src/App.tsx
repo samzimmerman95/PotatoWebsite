@@ -10,7 +10,7 @@ function App() {
     "0xeD5A54a2b7800C3D1c66F0E601037738B8dF6f8B"
   );
   const [collectionURL] = useState(
-    "https://testnets.opensea.io/collection/potatoclub-v4"
+    "https://testnets.opensea.io/collection/potatoclub-maticv1"
   );
   return (
     <BrowserRouter>
@@ -25,7 +25,7 @@ function App() {
           }
         />
         <Route
-          path="/how-to-guide"
+          path="how-to-guide"
           element={
             <HelpGuide
               contractAddress={contractAddress}
