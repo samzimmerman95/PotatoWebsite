@@ -18,8 +18,8 @@ export default function HelpGuide(props: any) {
           </div>
         </div>
         <div className="row mb-5">
-          <div className="col"></div>
-          <div className="col-8">
+          <div className="col-lg"></div>
+          <div className="col-lg-8">
             <div className="mb-3">
               <h2 className="text-center lh-1 myheaderFont">
                 How to Purchase a Potato Club <br /> NFT on Polygon
@@ -53,8 +53,7 @@ export default function HelpGuide(props: any) {
               with MetaMask. You can now interact with the Polygon Mainnet
               through your MetaMask wallet.
               <div className="row d-flex justify-content-center mt-2">
-                <div className="col-md-5 d-flex align-items-center">
-                  {/* UPDATED IMAGE REQUIRED HERE */}
+                <div className="col-md-5 col-8 d-flex align-items-center">
                   <img
                     src={require("./assets/help_guide/Add_Polygon.png").default}
                     className="img-fluid rounded"
@@ -117,7 +116,7 @@ export default function HelpGuide(props: any) {
               Enter the amount of ETH you wish to bridge, and you will see the
               amount you will recieve on Polygon.
               <div className="row d-flex justify-content-center my-2">
-                <div className="col-md-8 d-flex align-items-center">
+                <div className="col-md-8 col-10 d-flex align-items-center">
                   <img
                     src={require("./assets/help_guide/Bridge.png").default}
                     className="img-fluid rounded"
@@ -132,7 +131,7 @@ export default function HelpGuide(props: any) {
               to "Add Asset to MetaMask". Click this will ensure your asset will
               be visable, then open MetaMask and "Add Token".
               <div className="row d-flex justify-content-center my-2">
-                <div className="col-md-5 mb-2 mb-md-0 d-flex align-items-center">
+                <div className="col-md-5 col-sm col-8 mb-2 mb-md-0 d-flex align-items-center">
                   <img
                     src={
                       require("./assets/help_guide/Bridge_Confirmed.png")
@@ -142,7 +141,7 @@ export default function HelpGuide(props: any) {
                     alt="Bridging ETH to Polygon network"
                   />
                 </div>
-                <div className="col-md-5 d-flex align-items-center">
+                <div className="col-md-5 col-sm col-8 d-flex align-items-center">
                   <img
                     src={require("./assets/help_guide/Add_Token.png").default}
                     className="img-fluid rounded"
@@ -173,14 +172,14 @@ export default function HelpGuide(props: any) {
               </a>{" "}
               to swap any larger amount of ETH for MATIC.
               <div className="row d-flex justify-content-center my-2">
-                <div className="col-md-5 mb-2 mb-md-0 d-flex align-items-center">
+                <div className="col-md-5 col-sm col-8 mb-2 mb-md-0 d-flex align-items-center">
                   <img
                     src={require("./assets/help_guide/Gas_Swap.png").default}
                     className="img-fluid rounded"
                     alt="Swapping ETH for MATIC gas"
                   />
                 </div>
-                <div className="col-md-5 d-flex align-items-center">
+                <div className="col-md-5 col-sm col-8 d-flex align-items-center">
                   <img
                     src={require("./assets/help_guide/Token_Swap.png").default}
                     className="img-fluid rounded"
@@ -211,7 +210,7 @@ export default function HelpGuide(props: any) {
               the amount of MATIC you wish to bridge, and you will see the
               amount you will recieve on Polygon.
               <div className="row d-flex justify-content-center my-2">
-                <div className="col-md-8 d-flex align-items-center">
+                <div className="col-md-8 col-10 d-flex align-items-center">
                   <img
                     src={
                       require("./assets/help_guide/Bridge_Matic.png").default
@@ -242,14 +241,14 @@ export default function HelpGuide(props: any) {
               mobile app, create and verify your account. Find MATIC, then click
               "Buy MATIC".
               <div className="row d-flex justify-content-center my-2">
-                <div className="col-md-4 mb-2 mb-md-0 d-flex align-items-center">
+                <div className="col-md-4 col-sm col-8 mb-2 mb-md-0 d-flex align-items-center">
                   <img
                     src={require("./assets/help_guide/Crypto_1.PNG").default}
                     className="img-fluid rounded"
                     alt="Buy MATIC from Crypto.com"
                   />
                 </div>
-                <div className="col-md-4 d-flex align-items-center">
+                <div className="col-md-4 col-sm col-8 d-flex align-items-center">
                   <img
                     src={require("./assets/help_guide/Crypto_3.PNG").default}
                     className="img-fluid rounded"
@@ -263,21 +262,21 @@ export default function HelpGuide(props: any) {
               enter your MetaMask wallet address. Be sure to select the
               "Polygon" network.
               <div className="row d-flex justify-content-center my-2">
-                <div className="col-md-4 mb-2 mb-md-0 d-flex align-items-center">
+                <div className="col-md-4 col-sm col-8 mb-2 mb-md-0 d-flex align-items-center">
                   <img
                     src={require("./assets/help_guide/Crypto_4.PNG").default}
                     className="img-fluid rounded"
                     alt="Buy MATIC from Crypto.com"
                   />
                 </div>
-                <div className="col-md-4 mb-2 mb-md-0 d-flex align-items-center">
+                <div className="col-md-4 col-sm col-8 mb-2 mb-md-0 d-flex align-items-center">
                   <img
                     src={require("./assets/help_guide/Crypto_5.PNG").default}
                     className="img-fluid rounded"
                     alt="Buy MATIC from Crypto.com"
                   />
                 </div>
-                <div className="col-md-4 d-flex align-items-center">
+                <div className="col-md-4 col-sm col-8 d-flex align-items-center">
                   <img
                     src={require("./assets/help_guide/Crypto_6.PNG").default}
                     className="img-fluid rounded"
@@ -289,18 +288,13 @@ export default function HelpGuide(props: any) {
               your MetaMask wallet!
               <br /> <br />
               If you found this guide helpful we would love for you to join the{" "}
-              <a
-                className="text-white"
-                href={"https://potatoclub.art"}
-                target="_blank"
-                rel="noreferrer"
-              >
+              <Link to="/" className="text-white">
                 Potato Club
-              </a>{" "}
+              </Link>{" "}
               by minting your own, unique Potato Club NFT!
             </div>
           </div>
-          <div className="col"></div>
+          <div className="col-lg"></div>
         </div>
         <Footer
           address={props.contractAddress}

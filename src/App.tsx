@@ -13,7 +13,7 @@ function App() {
     "https://testnets.opensea.io/collection/potatoclub-maticv1"
   );
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <Routes>
         <Route
           path="/"

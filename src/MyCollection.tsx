@@ -47,7 +47,7 @@ export default function MyCollection(props: any) {
           >
             <a
               href={
-                "https://testnets.opensea.io/assets/" +
+                "https://testnets.opensea.io/assets/mumbai/" +
                 props.contractAddress +
                 "/" +
                 itemNum
@@ -94,15 +94,19 @@ export default function MyCollection(props: any) {
       <div className="mb-3">
         <h2 className="text-white myheaderFont">My Collection</h2>
         <div className="row row-cols-md-4 mt-2">{imagesRender}</div>
-        <div className="mt-2 d-flex justify-content-center">
-          <button
-            type="button"
-            className="btn myaccent4 px-4 text-white"
-            onClick={clickShow}
-          >
-            {showButtonText}
-          </button>
-        </div>
+        {allImages.length > 4 ? (
+          <div className="mt-2 d-flex justify-content-center">
+            <button
+              type="button"
+              className="btn myaccent4 px-4 text-white"
+              onClick={clickShow}
+            >
+              {showButtonText}
+            </button>
+          </div>
+        ) : (
+          <div></div>
+        )}
       </div>
     );
   } else {

@@ -52,6 +52,7 @@ For Deployment to mainnet
 3. OpenSea collection link
 4. Footer links etherscan
 5. Set release time in Mint.tsx
+6. My collection image links
 
 Contract Addresses
 

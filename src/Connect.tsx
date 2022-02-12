@@ -9,7 +9,6 @@ export default function Connect(props: {
   const [buttonText, setButtonText] = useState("Disconnected");
   const [buttonColor, setButtonColor] = useState("myaccentRed");
   const [disabledButton, setDisabledButton] = useState(false);
-  const [address, setAddress] = useState("");
 
   // Only run on load bc empty array second arg
   useEffect(() => {
@@ -33,9 +32,8 @@ export default function Connect(props: {
     const accounts = await ethereum.request({ method: "eth_accounts" });
     if (accounts.length !== 0) {
       connectToMatic();
-      setAddress(accounts[0]);
       setConnected(true);
-      setButtonText("Connected");
+      setButtonText(accounts[0].slice(0, 5) + "..." + accounts[0].slice(-4));
       setButtonColor("myaccentGreen");
       props.connectCallback();
     }
@@ -103,20 +101,13 @@ export default function Connect(props: {
       <div className="d-flex justify-content-md-end">
         <button
           type="button"
-          className={`btn ${buttonColor} text-white mb-2 `}
+          className={`btn ${buttonColor} text-white mb-2 px-3`}
           onClick={connectMetaMask}
           disabled={disabledButton}
         >
           {buttonText}
         </button>
       </div>
-      {connected ? (
-        <div className="d-flex justify-content-md-end text-white small">
-          Account: {address}
-        </div>
-      ) : (
-        <div></div>
-      )}
     </div>
   );
 }
