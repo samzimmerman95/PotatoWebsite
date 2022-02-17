@@ -14,7 +14,7 @@ function Home(props: any) {
   const [provider, setProvider] = useState({});
   const [signer, setSigner] = useState({});
   const [PotatoContract, setPotatoContract] = useState({});
-  const [desiredNetwork] = useState("maticmum");
+  const [desiredNetwork] = useState("matic");
 
   function onConnected() {
     console.log("Connection confirmed");

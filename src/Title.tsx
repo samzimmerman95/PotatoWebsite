@@ -18,8 +18,8 @@ export default function Title() {
       </div>
       <div className="col-md-5 d-flex align-items-center relativeContainer py-5 py-md-4">
         <img
-          // src={require("./assets/PotatoesV2.gif").default}
-          src={require("./assets/team/sam.png").default}
+          src={require("./assets/PotatoesV2.gif").default}
+          // src={require("./assets/team/sam.png").default}
           className="img-fluid rounded"
           alt="GIF"
         />

@@ -7,11 +7,9 @@ import NotFound from "./NotFound";
 
 function App() {
   const [contractAddress] = useState(
-    "0xeD5A54a2b7800C3D1c66F0E601037738B8dF6f8B"
+    "0xE7C18a3E60FC387f3Ae2725BF92811AAD05865f3"
   );
-  const [collectionURL] = useState(
-    "https://testnets.opensea.io/collection/potatoclub-maticv1"
-  );
+  const [collectionURL] = useState("https://opensea.io/collection/potatoclub");
   return (
     <BrowserRouter basename="/">
       <Routes>

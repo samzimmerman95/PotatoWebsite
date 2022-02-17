@@ -64,6 +64,8 @@ Contract Addresses
    0xFc1a7aa5Eb4793f623989383bFC7Eb6dE72C66eD
 4. 10k set Rinkeby
    0x0a8E812da2cf05b53090Fe0a74D550236AC52Eec
+5. PC Final Test. Minted with two ipfs locations, so can see errors
+   0xeD5A54a2b7800C3D1c66F0E601037738B8dF6f8B
 
 Creating the icon.ico
 

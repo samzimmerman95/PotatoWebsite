@@ -8,15 +8,15 @@ export default function Mint(props: any) {
   const [buyDisabled, setBuyDisabled] = useState(true);
   const [incCounterStyle, setIncCounterStyle] = useState("");
   const [decCounterStyle, setDecCounterStyle] = useState("mintCountDisable");
-  const [cost] = useState(3);
+  const [cost] = useState(20);
   const [showModal, setShowModal] = useState(false);
   const [modalText, setModalText] = useState("");
   const [modalSuccess, setModalSuccess] = useState(true);
   const [modalWaiting, setModalWaiting] = useState(true);
   const [modalConfetti, setModalConfetti] = useState(false);
   const [showTimer, setShowTimer] = useState(true);
-  // const [releaseTime] = useState(1638702747000);
-  const [releaseTime] = useState(Date.now() + 10000);
+  const [releaseTime] = useState(1638702747000);
+  // const [releaseTime] = useState(Date.now() + 10000);
   var totalCost = (cost * count).toFixed(0);
 
   useEffect(() => {

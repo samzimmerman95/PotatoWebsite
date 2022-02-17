@@ -35,7 +35,7 @@ export default function Footer(props: any) {
         </a>
         <a
           className="link-icon"
-          href={"https://mumbai.polygonscan.com/address/" + props.address}
+          href={"https://polygonscan.com/address/" + props.address}
           target="_blank"
           rel="noreferrer"
         >
