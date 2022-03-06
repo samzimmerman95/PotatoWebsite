@@ -15,7 +15,7 @@ export default function Mint(props: any) {
   const [modalWaiting, setModalWaiting] = useState(true);
   const [modalConfetti, setModalConfetti] = useState(false);
   const [showTimer, setShowTimer] = useState(true);
-  const [releaseTime] = useState(1645722000000);
+  const [releaseTime] = useState(1647792000000);
   // const [releaseTime] = useState(Date.now() + 10000);
   var totalCost = (cost * count).toFixed(0);
 
