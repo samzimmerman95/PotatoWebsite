@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.a95b349d.chunk.css",
-    "main.js": "./static/js/main.5cacced2.chunk.js",
-    "main.js.map": "./static/js/main.5cacced2.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.bb3f5a4d.js",
-    "runtime-main.js.map": "./static/js/runtime-main.bb3f5a4d.js.map",
-    "static/js/2.b8cc1655.chunk.js": "./static/js/2.b8cc1655.chunk.js",
-    "static/js/2.b8cc1655.chunk.js.map": "./static/js/2.b8cc1655.chunk.js.map",
-    "static/js/3.61447a39.chunk.js": "./static/js/3.61447a39.chunk.js",
-    "static/js/3.61447a39.chunk.js.map": "./static/js/3.61447a39.chunk.js.map",
+    "main.css": "./static/css/main.4e45056c.chunk.css",
+    "main.js": "./static/js/main.663e0378.chunk.js",
+    "main.js.map": "./static/js/main.663e0378.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.794a817e.js",
+    "runtime-main.js.map": "./static/js/runtime-main.794a817e.js.map",
+    "static/js/2.3fda8ea4.chunk.js": "./static/js/2.3fda8ea4.chunk.js",
+    "static/js/2.3fda8ea4.chunk.js.map": "./static/js/2.3fda8ea4.chunk.js.map",
+    "static/js/3.94a8436d.chunk.js": "./static/js/3.94a8436d.chunk.js",
+    "static/js/3.94a8436d.chunk.js.map": "./static/js/3.94a8436d.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.a95b349d.chunk.css.map": "./static/css/main.a95b349d.chunk.css.map",
-    "static/js/2.b8cc1655.chunk.js.LICENSE.txt": "./static/js/2.b8cc1655.chunk.js.LICENSE.txt",
+    "static/css/main.4e45056c.chunk.css.map": "./static/css/main.4e45056c.chunk.css.map",
+    "static/js/2.3fda8ea4.chunk.js.LICENSE.txt": "./static/js/2.3fda8ea4.chunk.js.LICENSE.txt",
     "static/media/1.png": "./static/media/1.c8502506.png",
     "static/media/2.png": "./static/media/2.a1ffc585.png",
     "static/media/3.png": "./static/media/3.8f9c5ae5.png",
@@ -32,13 +32,14 @@
     "static/media/OpenSea.svg": "./static/media/OpenSea.89f1832f.svg",
     "static/media/PotatoesV2.gif": "./static/media/PotatoesV2.26d9ebcf.gif",
     "static/media/Token_Swap.png": "./static/media/Token_Swap.dd1bcccf.png",
+    "static/media/icon_white_letters.svg": "./static/media/icon_white_letters.a7624c60.svg",
     "static/media/matt.png": "./static/media/matt.b0380130.png",
     "static/media/sam.png": "./static/media/sam.1187edd5.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.bb3f5a4d.js",
-    "static/js/2.b8cc1655.chunk.js",
-    "static/css/main.a95b349d.chunk.css",
-    "static/js/main.5cacced2.chunk.js"
+    "static/js/runtime-main.794a817e.js",
+    "static/js/2.3fda8ea4.chunk.js",
+    "static/css/main.4e45056c.chunk.css",
+    "static/js/main.663e0378.chunk.js"
   ]
 }
