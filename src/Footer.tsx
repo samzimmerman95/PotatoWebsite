@@ -41,6 +41,18 @@ export default function Footer(props: any) {
         >
           <i className="fas fa-file-contract fa-2x px-3"></i>
         </a>
+        <a
+          className="link-icon"
+          href="https://nftcalendar.io/event/potato-club-collection/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src={require("./assets/NFTCalendar/icon_white_letters.svg").default}
+            className="edit-link-icon-2 link-photo-2 mx-2 mb-3 mb-md-0"
+            alt="NFT Calendar"
+          />
+        </a>
       </div>
     </div>
   );
