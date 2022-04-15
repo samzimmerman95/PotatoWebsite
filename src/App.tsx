@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./Home";
 import HelpGuide from "./HelpGuide";
@@ -11,7 +11,8 @@ function App() {
   );
   const [collectionURL] = useState("https://opensea.io/collection/potatoclub");
   return (
-    <BrowserRouter basename="/">
+    // <BrowserRouter basename="/">
+    <HashRouter basename="/">
       <Routes>
         <Route
           path="/"
@@ -41,7 +42,8 @@ function App() {
           }
         />
       </Routes>
-    </BrowserRouter>
+      {/* // </BrowserRouter> */}
+    </HashRouter>
   );
 }
 

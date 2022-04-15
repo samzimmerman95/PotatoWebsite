@@ -12,15 +12,6 @@ export default function Footer(props: any) {
         >
           <i className="fab fa-twitter fa-2x px-3"></i>
         </a>
-
-        <a
-          className="link-icon"
-          href="https://discord.gg/mkdaSbE2TU"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <i className="fab fa-discord fa-2x px-3"></i>
-        </a>
         <a
           className="link-icon"
           href={props.openseaCollection}
